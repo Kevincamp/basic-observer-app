@@ -29,9 +29,12 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: BossDelegate {
+    
     func update(message: String) {
-        if(message.elementsEqual(UPDATE_MESSAGE)){
+        
+        if(message.elementsEqual(viewModel.UPDATE_MESSAGE)){
             lblAction.text = "Receive message from observer"
         }
     }
+    
 }

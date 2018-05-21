@@ -9,14 +9,16 @@
 /* BOSS */
 import Foundation
 
-let UPDATE_MESSAGE = "UPDATE_MESSAGE"
+
 
 protocol BossDelegate: class {
     func update(message: String)
 }
 
 class ViewModel {
-    var bossDelegate: BossDelegate!
+    public let UPDATE_MESSAGE = "UPDATE_MESSAGE"
+    
+    public var bossDelegate: BossDelegate!
 
     public func sendRequestToUpdateMessage(){
         bossDelegate.update(message: UPDATE_MESSAGE)
